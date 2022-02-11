@@ -23,7 +23,7 @@ Unpack the files into a directory, and then run cojin-qt.exe.
 
 ### OS X
 
-Drag cojin-More to your applications folder, and then run cojin
+Drag cojin to your applications folder, and then run cojin
 Building
 ---------------------
 The following are developer notes on how to build cojin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
