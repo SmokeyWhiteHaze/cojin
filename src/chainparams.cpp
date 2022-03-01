@@ -101,7 +101,7 @@ public:
         consensus.nLastPOWBlock = 1000000;
         consensus.nStakeTimestampMask = 0xf;
         consensus.nCoinbaseMaturity = 10;
-        consensus.nStakeMinAge = 1 * 60 * 60;
+        consensus.nStakeMinAge = 12 * 60 * 60;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
