@@ -147,21 +147,21 @@
               </property>
              </widget>
             </item>
-            <item row="6" column="0">
-             <widget class="QLabel" name="labelStakeText">
+            <item row="8" column="0">
+             <widget class="QLabel" name="labelBalanceText">
               <property name="font">
                <font>
                 <family>Calibri</family>
-                <pointsize>12</pointsize>
+                <pointsize>16</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">color: rgb(255, 34, 38);</string>
+               <string notr="true">color: rgb(25, 25, 25);</string>
               </property>
               <property name="text">
-               <string>Stake:</string>
+               <string>Available:</string>
               </property>
              </widget>
             </item>
@@ -296,7 +296,7 @@
               </property>
              </widget>
             </item>
-            <item row="5" column="2">
+            <item row="6" column="2">
              <widget class="Line" name="lineWatchBalance">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -355,54 +355,6 @@
               </property>
              </widget>
             </item>
-            <item row="6" column="1">
-             <widget class="QLabel" name="labelStake">
-              <property name="font">
-               <font>
-                <family>Calibri</family>
-                <pointsize>12</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 34, 38);</string>
-              </property>
-              <property name="text">
-               <string>0.000 000 00 BTC</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-              <property name="textInteractionFlags">
-               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="2">
-             <widget class="QLabel" name="labelWatchStake">
-              <property name="font">
-               <font>
-                <family>Calibri</family>
-                <pointsize>12</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 34, 38);</string>
-              </property>
-              <property name="text">
-               <string>0.000 000 00 BTC</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-              <property name="textInteractionFlags">
-               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
-              </property>
-             </widget>
-            </item>
             <item row="2" column="3">
              <spacer name="horizontalSpacer_21">
               <property name="orientation">
@@ -416,7 +368,37 @@
               </property>
              </spacer>
             </item>
-            <item row="5" column="0" colspan="2">
+            <item row="8" column="2">
+             <widget class="QLabel" name="labelWatchAvailable">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>16</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>IBeamCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>Your current balance in watch-only addresses</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(25, 25, 25);</string>
+              </property>
+              <property name="text">
+               <string notr="true">0.000 000 00 BTC</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0" colspan="2">
              <widget class="Line" name="line">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -489,25 +471,7 @@
               </property>
              </widget>
             </item>
-            <item row="7" column="0">
-             <widget class="QLabel" name="labelBalanceText">
-              <property name="font">
-               <font>
-                <family>Calibri</family>
-                <pointsize>16</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(25, 25, 25);</string>
-              </property>
-              <property name="text">
-               <string>Available:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
+            <item row="8" column="1">
              <widget class="QLabel" name="labelBalance">
               <property name="font">
                <font>
@@ -537,27 +501,63 @@
               </property>
              </widget>
             </item>
-            <item row="7" column="2">
-             <widget class="QLabel" name="labelWatchAvailable">
+            <item row="5" column="0">
+             <widget class="QLabel" name="labelStakeText">
               <property name="font">
                <font>
                 <family>Calibri</family>
-                <pointsize>16</pointsize>
+                <pointsize>11</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
-              <property name="cursor">
-               <cursorShape>IBeamCursor</cursorShape>
-              </property>
-              <property name="toolTip">
-               <string>Your current balance in watch-only addresses</string>
-              </property>
               <property name="styleSheet">
-               <string notr="true">color: rgb(25, 25, 25);</string>
+               <string notr="true">color: rgb(203, 30, 0);</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 BTC</string>
+               <string>Stake:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="labelStake">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(203, 30, 0);</string>
+              </property>
+              <property name="text">
+               <string>0.000 000 00 BTC</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLabel" name="labelWatchStake">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(203, 30, 0);</string>
+              </property>
+              <property name="text">
+               <string>0.000 000 00 BTC</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
