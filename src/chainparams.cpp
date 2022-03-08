@@ -82,18 +82,18 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.fPoSNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 5; // 95% of 5
-        consensus.nMinerConfirmationWindow = 5; // nTargetTimespan / nTargetSpacing
+        consensus.nRuleChangeActivationThreshold = 18;
+        consensus.nMinerConfirmationWindow = 24;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
 
-        /*
+        
         Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 999999999999ULL; // never
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 0; // out of time
-        */
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1646709000;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1646715000;
+        
 
         consensus.nProtocolV1RetargetingFixedTime = 1646407224;
         consensus.nProtocolV2Time = 1646407225;
@@ -104,17 +104,17 @@ public:
         consensus.nStakeMinAge = 8 * 60 * 60;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xc3;
-        pchMessageStart[1] = 0xf5;
-        pchMessageStart[2] = 0xe6;
-        pchMessageStart[3] = 0xfd;
+        pchMessageStart[0] = 0xc0;
+        pchMessageStart[1] = 0xf3;
+        pchMessageStart[2] = 0xe4;
+        pchMessageStart[3] = 0xf0;
         nDefaultPort = 18327;
         nPruneAfterHeight = 100000;
 
@@ -149,8 +149,8 @@ public:
 	    vSeeds.push_back(CDNSSeedData("51.195.235.147", "51.195.235.147",true));
 	     
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28); // C
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,28); // C
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,28); // C
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,87); // c
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x11)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x11)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         cashaddrPrefix = "cojin";
@@ -218,13 +218,13 @@ public:
         nDefaultPort = 19837;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
-        /*
+        
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 999999999999ULL; // never
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 0; // out of time
-        */
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
+        
 
         nPruneAfterHeight = 1000;
 
@@ -316,11 +316,11 @@ public:
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x00");
 
-        /*
+        
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 999999999999ULL; // never
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 0; // out of time
-        */
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
+
 
         consensus.nProtocolV1RetargetingFixedTime = 1646407324;
         consensus.nProtocolV2Time = 1646407325;
