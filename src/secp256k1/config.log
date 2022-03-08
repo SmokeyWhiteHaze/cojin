@@ -309,7 +309,7 @@ configure:7779: result: yes
 configure:8035: checking for objdir
 configure:8050: result: .libs
 configure:8314: checking if gcc supports -fno-rtti -fno-exceptions
-configure:8332: gcc -c -g -O2 -I/include/ -fno-rtti -fno-exceptions conftest.c >&5
+configure:18326: gcc -c -g -O2 -I/include/ -fno-rtti -fno-exceptions conftest.c >&5
 cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
 configure:8336: $? = 0
 configure:8349: result: no
