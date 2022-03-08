@@ -89,7 +89,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
 
         
-        Deployment of BIP68, BIP112, and BIP113.
+       // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1646709000;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1646715000;
