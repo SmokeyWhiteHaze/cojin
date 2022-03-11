@@ -74,25 +74,25 @@ public:
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.posLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.posLimitV2 = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nTargetTimespan =  2 * 60;
+        consensus.nTargetTimespan =  15 * 60;
         consensus.nTargetSpacingV1 = 3 * 60;
         consensus.nTargetSpacing = 3 * 60;
-        consensus.BIP34Height = -1;
-        consensus.BIP34Hash = uint256();
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("0x00000c447120a886df7706bb576cba9e8aa9ba37ebe2152ea57bf91a3f824ad7");
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.fPoSNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 18;
         consensus.nMinerConfirmationWindow = 24;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1646747977;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1646770000;
 
         
-       // Deployment of BIP68, BIP112, and BIP113.
+        // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1646709000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1646715000;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1646747977;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1646770000;
         
 
         consensus.nProtocolV1RetargetingFixedTime = 1646407224;
@@ -104,17 +104,17 @@ public:
         consensus.nStakeMinAge = 8 * 60 * 60;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000067365988c");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xc0;
-        pchMessageStart[1] = 0xf3;
-        pchMessageStart[2] = 0xe4;
-        pchMessageStart[3] = 0xf0;
+        pchMessageStart[0] = 0xc4;
+        pchMessageStart[1] = 0xf8;
+        pchMessageStart[2] = 0xb9;
+        pchMessageStart[3] = 0xd0;
         nDefaultPort = 18327;
         nPruneAfterHeight = 100000;
 
@@ -143,8 +143,8 @@ public:
             std::cout << "blockhash: " << genesis.GetHash().ToString().c_str() << "\n";
             std::cout << "merklehash: " << genesis.hashMerkleRoot.ToString().c_str() << "\n";
         }
-        assert(consensus.hashGenesisBlock == uint256S("0x00000c447120a886df7706bb576cba9e8aa9ba37ebe2152ea57bf91a3f824ad7")); // "));
-        assert(genesis.hashMerkleRoot == uint256S("0x94587a56e33bd289e86ccc6cfdf903bf5a7f7ef103b5b96280a42255e59f2cab")); //"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000c447120a886df7706bb576cba9e8aa9ba37ebe2152ea57bf91a3f824ad7"));
+        assert(genesis.hashMerkleRoot == uint256S("0x94587a56e33bd289e86ccc6cfdf903bf5a7f7ef103b5b96280a42255e59f2cab"));
 
 	    vSeeds.push_back(CDNSSeedData("51.195.235.147", "51.195.235.147",true));
      
@@ -165,11 +165,19 @@ public:
 
         checkpointData = (CCheckpointData) {
                     boost::assign::map_list_of
-                    (0, uint256S("0x00000c447120a886df7706bb576cba9e8aa9ba37ebe2152ea57bf91a3f824ad7")),
-                    1646407224, // * UNIX timestamp of last checkpoint block
-                    0,    // * total number of transactions between genesis and last checkpoint
+                    (0, uint256S("0x00000c447120a886df7706bb576cba9e8aa9ba37ebe2152ea57bf91a3f824ad7"))
+                    (1, uint256S("0x4f7d040192a27a7f91dff4435312d628266c48f0307a5d8c817badac12da2ee7"))
+                    (16, uint256S("0xa2a0390c8c1df6ed30ffedefa5ebb5106096d603294b72998515ad2048fcf770"))
+                    (21, uint256S("0x6112f2f121025b73cdd0a021c712de17574fe844b73401ad60ec9461dae7af36"))
+                    (94, uint256S("0x2baf0dddf1ea58d7d4e8de54296701bf531f5d49bd6e5da423e08617cc29469d")) // CSV activation started
+                    (118, uint256S("0xa04e4ffd3b9ab96069dd9cabac9ed9beb5698d040c6feff5e86a56ed9a3b917c")) // CSV locked_in
+                    (142, uint256S("0x42f9f74017e5c320a9a24c7ec7861040689365aab2ba19fecbc1f7f119f75fb5")) // CSV active
+                    (148, uint256S("0x440fc0bee1b03d4e03b39a5e7fd9eccaec75762475de886bb92fac357039d019")),
+
+                    1646759507, // * UNIX timestamp of last checkpoint block
+                    168,    // * total number of transactions between genesis and last checkpoint
                                 //   (the tx=... number in the SetBestChain debug.log lines)
-                    0      // * estimated number of transactions per day after checkpoint
+                    0.999999 // * estimated number of transactions per day after checkpoint
         };
    }
 };
