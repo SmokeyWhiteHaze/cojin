@@ -640,10 +640,10 @@ void RPCConsole::clear(bool clearHistory)
         QString(
                 "table { }"
                 "td.time { color: #808080; font-size: %2; padding-top: 3px; } "
-                "td.message { font-family: %1; font-size: %2; white-space:pre-wrap; } "
-                "td.cmd-request { color: #006060; } "
-                "td.cmd-error { color: red; } "
-                "b { color: #006060; } "
+                "td.message { font-family: calibri; font-size: %2; white-space:pre-wrap; } "
+                "td.cmd-request { color: #D64923; font-family: calibri; font-size: 15px; } "
+                "td.cmd-error { color: #D62399; } "
+                "b { color: #D64923; } "
             ).arg(fixedFontInfo.family(), QString("%1pt").arg(consoleFontSize))
         );
 
