@@ -1,11 +1,6 @@
 cojin
 =============
 
-Setup
----------------------
-cojin is experimental cojin client and it builds the backbone of the network. However, it downloads and stores the entire history of cojin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
-
-To download cojin, visit [cojin.org](https://cojin.org).
 
 Running
 ---------------------
@@ -26,13 +21,6 @@ Unpack the files into a directory, and then run cojin-qt.exe.
 
 Drag cojin-More to your applications folder, and then run cojin-More.
 
-### Need Help?
-
-* See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
-for help and more information.
-* Ask for help on [#cojin](https://discord.gg/zmGr38eJYE) on Freenode.
-* Ask for help in [/r/cojin/](https://nm.reddit.com/r/cojin/) on Reddit.
-* Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [cojin topic](https://bitcointalk.org/index.php?topic=5378794.msg58833379#msg58833379).
 
 Building
 ---------------------
@@ -61,10 +49,7 @@ The cojin repo's [root README](/README.md) contains relevant information on the 
 - [Dnsseed Policy](dnsseed-policy.md)
 - [Benchmarking](benchmarking.md)
 
-### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [cojin topic](https://bitcointalk.org/index.php?topic=5378794.msg58833379#msg58833379).
-* Discuss cojin development in [cojin room](https://github.com/cojin/cojin) on Github.
-* Discuss cojin development in [cojin team](https://discord.gg/zmGr38eJYE) on Discord.
+
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
